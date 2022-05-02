@@ -2,4 +2,4 @@
 def print_list_integer(my_list=[]):
     if my_list is not None:
         for i in my_list:
-            print(i)
+            print(f"{i}")
