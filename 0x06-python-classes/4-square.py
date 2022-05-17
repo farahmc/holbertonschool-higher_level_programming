@@ -6,20 +6,20 @@
 
 
 class Square:
-    """A class Square"""
+    """A class Square
 
-    """Instantiation with size"""
+    Instantiation with size"""
     def __init__(self, size=0):
         self.size = size
 
     @property
-    """Get the size of the square"""
     def size(self):
+    """Get the size of the square"""
         return self.__size
 
     @size.setter
-    """Set the size of the square"""
     def size(self, value):
+    """Set the size of the square"""
         if isinstance(value, int) is not True:
             raise TypeError("size must be an integer")
         if value < 0:
