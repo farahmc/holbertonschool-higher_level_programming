@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-class Square:
-    """A class Square with private instance attribute size
+"""A class Square with private instance attribute size
     Instantiation with size
     raise errors if size is not an int or less than 0"""
 
+
+class Square:
     def __init__(self, size=0):
         if isinstance(size, int) is not True:
             raise TypeError("size must be an integer")
