@@ -24,16 +24,16 @@ Write a class `Square` that defines a square (based on `2-square.py`) by:
 ### 4. Access and update private attribute
 Write a class `Square` that defines a square (based on `3-square.py`) by:
 - Private instance attribute: `size:`
-  	  - property `def size(self):` to retrieve it
-	  - property setter `def size(self, value):` to set it
+  - property `def size(self):` to retrieve it
+  - property setter `def size(self, value):` to set it
 - Instantiation with optional `size`: `def __init__(self, size=0):`
 - Public instance method: `def area(self):` that returns the current square area
 
 ### 5. Printing a square
 Write a class `Square` that defines a square (based on `4-square.py`) by:
 - Private instance attribute: `size:`
-  	  - property def `size(self):` to retrieve it
-	  - property setter `def size(self, value):` to set it
+  - property def `size(self):` to retrieve it
+  - property setter `def size(self, value):` to set it
 
 ### 6. Coordinates of a square
 Write a class `Square` that defines a square (based on `5-square.py`) by:
