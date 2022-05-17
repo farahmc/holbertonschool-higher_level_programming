@@ -6,11 +6,12 @@
     Public instance method area which returns the square area
     Public instance method my_print to print square"""
 
+
 class Square:
     """A class Square
 
     Instantiation with size"""
-    def __init__(self, size=0, position=(0,0)):
+    def __init__(self, size=0, position=(0, 0)):
         self.__size = size
         self.__position = position
 
@@ -36,10 +37,12 @@ class Square:
     """Set the position of the square"""
     @position.setter
     def position(self, value):
-        if ( isinstance(self.__position, tuple) is not True
-             or all(isinstance(element, int) for element in value) is not True
-             or all(isinstance(element >= 0 for element in value)) is not True
-             or len(value) != 2):
+        if (
+                isinstance(self.__position, tuple) is False
+                or all(isinstance(element, int) for element in value) is False
+                or all(isinstance(element >= 0 for element in value)) is False
+                or len(value) != 2
+        ):
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
