@@ -12,17 +12,18 @@ class Square:
 
     Instantiation with size"""
     def __init__(self, size=0, position=(0, 0)):
-        if not isinstance(value, int):
+        if not isinstance(size, int):
             raise TypeError("size must be an integer")
-        elif value < 0:
+        elif size < 0:
             raise ValueError("size must be >= 0")
         self.__size = size
 
         if (
-                not isinstance(self.__position, tuple)
-                or not all(isinstance(element, int) for element in value)
-                or not all(isinstance(element >= 0 for element in value))
-                or len(value) != 2
+                not isinstance(position, tuple)
+                or not all(isinstance(element, int) for element in position)
+                or position[0] < 0
+                or position[1] < 0
+                or len(position) != 2
         ):
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = position
