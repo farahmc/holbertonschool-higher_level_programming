@@ -14,11 +14,11 @@ to 1 decimal point if the quotient is a whole number, or to 2 decimal points
 if the quotient is a fraction, in a new matrix.
 
 Import module:
+
        >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
 
 
 Testing:
-
 The function works when both the matrix elements and div are positive or negative
 integers, floats, or any combination of both.
 
@@ -67,24 +67,20 @@ float.
        ...
        TypeError: div must be a number
 
-       >>> matrix = [
-       ... 	  [hello, 2, 3],
-       ...	  [4, 5, 6]
-       ... ]
+
+A TypeError is raised if each row of the matrix is not the same in size.
+
+       >>> matrix = [1, 2, 3]
        >>> print(matrix_divided(matrix, 2))
        Traceback (most recent call last):
        ...
        TypeError: matrix must be a matrix (list of lists) of integers/floats
 
-
-A TypeError is raised if the lists within the matrix are not of the same size
-(i.e. each list has the same number of elements)
-
        >>> matrix = [
-       ... 	  [1, 2, 3, 4],
-       ...	  [5, 6, 7]
+       ... 	  [1, 2],
+       ...	  [4, 5, 6]
        ... ]
-       >>> print(matrix_divided(matrix, 2))
+       >> print(matrix_divided(matrix, 2))
        Traceback (most recent call last):
        ...
        TypeError: Each row of the matrix must have the same size
