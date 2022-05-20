@@ -24,11 +24,12 @@ def matrix_divided(matrix, div):
     for row in matrix:
         if not isinstance(row, list):
             raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+        for ele in row:
+            if not isinstance(ele, int) and not isinstance(ele, float):
+                raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
 
     length = len(matrix[0])
-    print(length)
     for row in matrix:
-        print(f"length of row elements: {len(row)}")
         if len(row) != length:
             raise TypeError("Each row of the matrix must have the same size")
 
