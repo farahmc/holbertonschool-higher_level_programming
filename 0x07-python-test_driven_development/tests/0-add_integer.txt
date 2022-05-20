@@ -1,0 +1,76 @@
+==========================
+The ``add_integer`` module
+==========================
+
+This module defines a function which adds 2 integers.
+
+Using ``add_integer``
+---------------------
+``add_integer(a, b=98)`` returns the sum of the 2 given arguments as an
+integer.
+
+Import module:
+        >>> add_integer = __import__('0-add_integer').add_integer
+
+Testing:
+
+The function works with positive or negative integers, floats,
+or a combination of the two.
+Floats are casted to an integer prior to the addition.
+
+	>>> add_integer(3, 5)
+	8
+
+	>>> add_integer(3, -4)
+	-1
+
+	>>> add_integer(3.1, 2)
+	5
+
+	>>> add_integer(-2.5, -4)
+	-6
+
+	>>> add_integer(3)
+	101
+
+Using infinity raises an OverflowError.
+
+	>>> add_integer(5, float('inf'))
+	Traceback (most recent call last):
+	...
+	OverflowError: cannot convert float infinity to integer
+
+The function raises a TypeError with non-integer or float arguments such as
+strings, lists, dictionaries.
+
+	>>> add_integer("hello")
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
+
+	>>> add_integer([3, 5], 2)
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
+
+	>>> add_integer(3, (5, 2))
+	Traceback (most recent call last):
+	...
+	TypeError: b must be an integer
+
+	>>> add_integer(5, {hello: world})
+	Traceback (most recent call last):
+	...
+	NameError: name 'hello' is not defined
+
+	>>> add_integer(5, {"hello": "world"})
+	Traceback (most recent call last):
+	...
+	TypeError: b must be an integer
+
+The function raises a TypeError when passing more than 2 arguments.
+
+	>>> add_integer(3, 5, 2.0)
+	Traceback (most recent call last):
+	...
+	TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
