@@ -1,0 +1,64 @@
+==========================
+The ``say_my_name`` module
+==========================
+
+This module defines a function that prints 2 strings.
+
+Using ``say_my_name``
+---------------------
+``say_my_name(first_name, last_name="")`` returns the 2 strings
+representing the first and last name in that order.
+
+Import module:
+        >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Testing:
+
+The function will only take a string with alphabet characters
+as arguments to succeed.
+
+	>>> say_my_name("John", "Smith")
+	My name is John Smith
+
+	>>> say_my_name(12, "White")
+	Traceback (most recent call last):
+	...
+	TypeError: first_name must be a string
+
+	>>> say_my_name("")
+	Traceback (most recent call last):
+	...
+	TypeError: first_name must be a string
+
+	>>> say_my_name("John Harry", "Smith")
+	My name is John Harry Smith
+
+	>>> say_my_name("J0hn", "Smith")
+	Traceback (most recent call last):
+	...
+	ValueError: first_name and last_name cannot contain numbers
+
+	>>> say_my_name("John", "Sm1th")
+	Traceback (most recent call last):
+	...
+	ValueError: first_name and last_name cannot contain numbers
+
+	>>> say_my_name()
+	Traceback (most recent call last):
+	...
+	TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+	>>> say_my_name("John", "Harry", "Smith")
+	Traceback (most recent call last):
+	...
+	TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
+
+	>>> say_my_name(None, "Smith")
+	Traceback (most recent call last):
+	...
+	TypeError: first_name must be a string
+
+	>>> say_my_name(["John", "Smith"])
+	Traceback (most recent call last):
+	...
+	TypeError: first_name must be a string
