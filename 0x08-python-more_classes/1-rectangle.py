@@ -11,8 +11,8 @@ class Rectangle:
         """
         Initialise a rectangle.
         """
-        self.width = width
         self.height = height
+        self.width = width
 
     @property
     def width(self):
@@ -22,7 +22,7 @@ class Rectangle:
         return self.__width
 
     @width.setter
-    def width(self,value):
+    def width(self, value):
         """
         Set the width of the rectangle
         """

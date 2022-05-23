@@ -25,8 +25,8 @@ class Rectangle:
         height: height of rectangle
         """
         type(self).number_of_instances += 1
-        self.width = width
         self.height = height
+        self.width = width
 
     @property
     def width(self):
@@ -112,7 +112,7 @@ class Rectangle:
 
     def __del__(self):
         """
-        Print a message for every time Rectangle is deleted
+        Print a message every time Rectangle is deleted
         """
         print('Bye rectangle...')
         type(self).number_of_instances -= 1
