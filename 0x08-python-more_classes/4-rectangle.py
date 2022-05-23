@@ -80,4 +80,4 @@ class Rectangle:
         """
         Return a string representation
         """
-        return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
+        return f"Rectangle({self.__width}, {self.__height})"
