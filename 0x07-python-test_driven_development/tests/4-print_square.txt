@@ -1,0 +1,68 @@
+==========================
+The ``print_square`` module
+==========================
+
+This module defines a function that prints a representation of a
+square using the character #.
+
+Using ``print_square``
+---------------------
+``print_square(size)`` prints a representation of a square, with the
+argument passed taken as the height and width of the square.
+
+Import module:
+        >>> print_square = __import__('4-print_square').print_square
+
+Testing:
+
+The function will only take a postive integer as an argument to succeed.
+
+	>>> print_square(5)
+	#####
+	#####
+	#####
+	#####
+	#####
+
+A TypeError is raised for any argument passed that is not an integer.
+
+	>>> print_square("hello")
+	Traceback (most recent call last):
+	...
+	TypeError: size must be an integer
+
+	>>> print_square([2, 3])
+	Traceback (most recent call last):
+	...
+	TypeError: size must be an integer
+
+	>>> print_square((4, 2))
+	Traceback (most recent call last):
+	...
+	TypeError: size must be an integer
+
+	>>> print_square(float(2.2))
+	Traceback (most recent call last):
+	...
+	TypeError: size must be an integer
+
+
+A ValueError is raised for any negative integers:
+
+	>>> print_square(-3)
+	Traceback (most recent call last):
+	...
+	ValueError: size must be >= 0
+
+
+A TypeError is raised if the wrong number of arguments is given.
+
+	>>> print_square()
+	Traceback (most recent call last):
+	...
+	TypeError: print_square() missing 1 required positional argument: 'size'
+
+	>>> print_square(2, 2)
+	Traceback (most recent call last):
+	...
+	TypeError: print_square() takes 1 positional argument but 2 were given
