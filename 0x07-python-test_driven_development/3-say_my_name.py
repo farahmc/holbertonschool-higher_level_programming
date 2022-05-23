@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-"""Function to print first and last name"""
+"""
+Function to print first and last name
+"""
+
 
 def is_number(string):
     """
@@ -7,6 +10,7 @@ def is_number(string):
     """
     isdigit = str.isdigit
     return any(map(isdigit, string))
+
 
 def say_my_name(first_name, last_name=""):
     """
