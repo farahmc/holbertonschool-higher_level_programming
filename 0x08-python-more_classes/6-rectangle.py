@@ -76,7 +76,7 @@ class Rectangle:
 
     def __str__(self):
         """
-        Return a string representation
+        Return a printable representation
         """
         string_rep = ""
         if self.width == 0 or self.height == 0:
@@ -89,8 +89,14 @@ class Rectangle:
         return string_rep
 
     def __repr__(self):
+        """
+        Return a string representation
+        """
         return f'Rectangle({self.width},{self.height})'
 
     def __del__(self):
+        """
+        Print a message for every time Rectangle is deleted
+        """
         print('Bye rectangle...')
         type(self).number_of_instances -= 1
