@@ -5,16 +5,26 @@ Representation of a rectangle
 
 
 class Rectangle:
-    """Representation of a rectangle"""
+    """
+    Representation of a rectangle
+
+    Attributes:
+    number_of_instances: Number of instances of class Rectangle
+    """
+
     number_of_instances = 0
 
     def __init__(self, width=0, height=0):
         """
         Initialise a rectangle.
+
+        Arguments:
+        width: width of rectangle
+        height: height of rectangle
         """
+        type(self).number_of_instances += 1
         self.width = width
         self.height = height
-        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -83,4 +93,4 @@ class Rectangle:
 
     def __del__(self):
         print('Bye rectangle...')
-        Rectangle.number_of_instances -= 1
+        type(self).number_of_instances -= 1
