@@ -33,6 +33,12 @@ The function will only take a string as an argument to succeed.
 	<BLANKLINE>
 
 
+Leading and trailing whitespaces are stripped.
+
+	>>> text_indentation("     Hello world   ")
+	Hello world
+
+
 A ValueError is raised if an empty string is passed.
 
 	>>> text_indentation("")
