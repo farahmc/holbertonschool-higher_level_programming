@@ -8,13 +8,8 @@ def text_indentation(text):
         raise TypeError("text must be a string")
     if len(text) == 0:
         raise ValueError("string cannot be empty")
-    text = text.replace(". ", ".\n\n")
-    text = text.replace("? ", "?\n\n")
-    text = text.replace(": ", ":\n\n")
-    if text[-1] == ".":
-        text = text.replace(".", ".\n\n")
-    if text[-1] == "?":
-        text = text.replace("?", "?\n\n")
-    if text[-1] == ":":
-        text = text.replace(":", ":\n\n")
-    print(text, end="")
+    text = text.translate({ord('.'):'.\n', ord('?'):'?\n', ord(':'):':\n'})
+    new = ''.join([line.strip()+'\n\n' for line in text.splitlines()])
+    if new[-1] == "\n" and new[-1] != "?":
+        new = new.rstrip('\n')
+    print(new, end="")
