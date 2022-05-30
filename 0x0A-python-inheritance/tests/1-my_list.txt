@@ -35,7 +35,8 @@ The class must be imported with no arguments, or an error is raised.
 	NameError: name 'hello' is not defined
 
 
-Elements can be appended to the list and printed.
+Elements can be appended to the list and printed, sorted, and the original list
+remaining unchanged.
 
        >>> my_list.append(1)
        >>> my_list.append(4)
@@ -43,10 +44,6 @@ Elements can be appended to the list and printed.
        >>> my_list.append(3)
        >>> print(my_list)
        [1, 4, 2, 3]
-
-
-The list can be sorted, and the original list remains unchanged.
-
        >>> my_list.print_sorted()
        [1, 2, 3, 4]
        >>> print(my_list)
