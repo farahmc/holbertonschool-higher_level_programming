@@ -13,10 +13,12 @@ Import module:
 
 Testing:
 
-The MyList object can be created.
+The MyList object can be created, of type class.
 
 	>>> my_list
 	[]
+	>>> type(my_list)
+	<class '1-my_list.MyList'>
 
 
 The class must be imported with no arguments, or an error is raised.
@@ -49,6 +51,14 @@ The list can be sorted, and the original list remains unchanged.
        [1, 2, 3, 4]
        >>> print(my_list)
        [1, 4, 2, 3]
+
+
+No arguments can be passed when sorting.
+
+       >>> my_list.print_sorted(3)
+       Traceback (most recent call last):
+       ...
+       TypeError: print_sorted() takes 1 positional argument but 2 were given
 
 
 Negative integers can be appended and sorted.
