@@ -6,7 +6,12 @@ A module that creates a class names BaseGeometry
 
 class BaseGeometry:
     """
-    A class that raises an exception
+    A class that raises an exception and checks if a value
+    is an integer >0
+
+    Attributes:
+    area - raises an exception
+    integer_validator - checks if value is an integer >0
     """
     def area(self):
         """
