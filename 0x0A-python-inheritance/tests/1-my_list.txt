@@ -13,23 +13,76 @@ Import module:
 
 Testing:
 
-The class can be imported with no arguments, returning an empty list
+The MyList object can be created.
+
+	>>> my_list
+	[]
 
 
-A list of strings is sorted in alphabetical order.
+The class must be imported with no arguments, or an error is raised.
 
-       >>> my_list = MyList()
-       >>> my_list.append("Can")
-       >>> my_list.append("You")
-       >>> my_list.append("See")
-       >>> my_list.append("Me")
-       >>> my_list.print._sorted()
-       ['Can', 'Me', 'See', 'You']
+	>>> my_list = MyList(1)
+	Traceback (most recent call last):
+	...
+	TypeError: 'int' object is not iterable
 
-A TypeError is raised for a list of mixed elements.
 
- 	>>> mylist.append("Hello")
-	[1, 4, 2, 3, 5, 'hello']
+	>>> my_list = MyList([hello, world])
+	Traceback (most recent call last):
+	...
+	NameError: name 'hello' is not defined
+
+
+Elements can be appended to the list and printed.
+
+       >>> my_list.append(1)
+       >>> my_list.append(4)
+       >>> my_list.append(2)
+       >>> my_list.append(3)
+       >>> print(my_list)
+       [1, 4, 2, 3]
+
+
+The list can be sorted, and the original list remains unchanged.
+
+       >>> my_list.print_sorted()
+       [1, 2, 3, 4]
+       >>> print(my_list)
+       [1, 4, 2, 3]
+
+
+Negative integers can be appended and sorted.
+
+       >>> my_list.append(-1)
+       >>> my_list.append(-4)
+       >>> my_list.append(-2)
+       >>> my_list.print_sorted()
+       [-4, -2, -1, 1, 2, 3, 4]
+
+
+Any type of data can be appended to the list.
+
+       >>> my_list.append("hello")
+       >>> print(my_list)
+       [1, 4, 2, 3, -1, -4, -2, 'hello']
+
+
+However a list of mixed elements cannot be sorted.
+
+ 	>>> my_list.print_sorted()
 	Traceback (most recent call last):
 	...
 	TypeError: '<' not supported between instances of 'str' and 'int'
+
+
+A list of strings can be sorted alphabetically.
+
+ 	>>> my_list = MyList()
+	>>> my_list.append("Can")
+	>>> my_list.append("You")
+	>>> my_list.append("See")
+	>>> my_list.append("Me")
+	>>> print(my_list)
+	['Can', 'You', 'See', 'Me']
+	>>> my_list.print_sorted()
+	['Can', 'Me', 'See', 'You']
