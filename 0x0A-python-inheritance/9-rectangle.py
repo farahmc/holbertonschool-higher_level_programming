@@ -28,8 +28,11 @@ class Rectangle(BaseGeometry):
         """
         return (self.__width * self.__height)
 
-    def __repr__(self):
+    def __str__(self):
         """
-        Return a string representation
+        Return a print() and string representation
         """
-        return f"[Rectangle] {self.__width}/{self.__height}"
+        string_rep = ""
+        string_rep = "[" + str(self.__class__.__name__) + "] "
+        string_rep += str(self.__width) + "/" + str(self.__height)
+        return string_rep
