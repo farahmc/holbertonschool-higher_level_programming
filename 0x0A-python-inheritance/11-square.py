@@ -2,7 +2,7 @@
 """
 A module with a base class BaseGeometry and inherited class Rectangle
 """
-Rectangle = __import__('8-rectangle').Rectangle
+Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
@@ -17,16 +17,5 @@ class Square(Rectangle):
         size - width and height of square
         """
         self.integer_validator("size", size)
+        super().__init__(size, size)
         self.__size = size
-
-    def area(self):
-        """
-        Return the area of a square
-        """
-        return (self.__size * self.__size)
-
-    def __repr__(self):
-        """
-        Return a string representation
-        """
-        return f"[Square] {self.__size}/{self.__size}"
