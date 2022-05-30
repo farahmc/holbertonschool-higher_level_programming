@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-A class that raises an exception
+A module that creates a class names BaseGeometry
 """
 
 
