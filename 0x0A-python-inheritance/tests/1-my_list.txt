@@ -1,0 +1,35 @@
+==========================
+Using ``1-my_list.py``
+==========================
+
+This module defines a class ``MyList`` which inherits from ``list``.
+
+Instantiation
+---------------------
+
+Import module:
+        >>> MyList = __import__('1-my_list').MyList
+	>>> my_list = MyList()
+
+Testing:
+
+The class can be imported with no arguments, returning an empty list
+
+
+A list of strings is sorted in alphabetical order.
+
+       >>> my_list = MyList()
+       >>> my_list.append("Can")
+       >>> my_list.append("You")
+       >>> my_list.append("See")
+       >>> my_list.append("Me")
+       >>> my_list.print._sorted()
+       ['Can', 'Me', 'See', 'You']
+
+A TypeError is raised for a list of mixed elements.
+
+ 	>>> mylist.append("Hello")
+	[1, 4, 2, 3, 5, 'hello']
+	Traceback (most recent call last):
+	...
+	TypeError: '<' not supported between instances of 'str' and 'int'
