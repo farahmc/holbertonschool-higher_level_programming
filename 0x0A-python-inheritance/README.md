@@ -54,3 +54,10 @@ Write a class `Square` that inherits from `Rectangle` (`9-rectangle.py`):
 Write a class `Square` that inherits from `Rectangle` (`9-rectangle.py`):
 - Instantiation with `size`: `def __init__(self, size):`
 - the `area()` method must be implemented
+
+### 12. My integer
+Write a class `MyInt` that inherits from `int`
+- `MyInt` is a rebel. `MyInt` has `==` and `!=` operators inverted
+
+### 13. Can I?
+Write a function that adds a new attribute to an object if it’s possible.
