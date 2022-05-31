@@ -28,9 +28,7 @@ class Student:
         list must be retrieved
         """
         if type(attrs) == list and all(type(el) == str for el in attrs):
-            new_dict = {}
-            for key in attrs:
-                if key in self.__dict__:
-                    new_dict[key] = self.__dict__[key]
+            new_dict = {key: getattr(self, key) for key in attrs
+                        if hasattr(self, key)}
             return new_dict
         return self.__dict__
