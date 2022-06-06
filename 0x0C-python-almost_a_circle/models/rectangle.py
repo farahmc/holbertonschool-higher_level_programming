@@ -138,7 +138,7 @@ class Rectangle(Base):
         """
         Return a printable representation
         """
-        cls = self.__class__.__name__
+        class_name = self.__class__.__name__
         sw = self.width
         sh = self.height
-        return f"[{cls}] ({self.id}) {self.x}/{self.y} - {sw}/{sh}"
+        return f"[{class_name}] ({self.id}) {self.x}/{self.y} - {sw}/{sh}"
