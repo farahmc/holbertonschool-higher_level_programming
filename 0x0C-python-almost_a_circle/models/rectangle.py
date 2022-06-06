@@ -75,7 +75,8 @@ class Rectangle(Base):
         """
         Return a dictionary representation
         """
-        return {'x': self.x, 'y': self.y, 'id': self.id, 'height': self.height, 'width': self.width}
+        return {'x': self.x, 'y': self.y, 'id': self.id, 'height': self.height,
+                'width': self.width}
 
     @property
     def width(self):
@@ -137,4 +138,7 @@ class Rectangle(Base):
         """
         Return a printable representation
         """
-        return f"[{self.__class__.__name__}] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
+        cls = self.__class__.__name__
+        sw = self.width
+        sh = self.height
+        return f"[{cls}] ({self.id}) {self.x}/{self.y} - {sw}/{sh}"
