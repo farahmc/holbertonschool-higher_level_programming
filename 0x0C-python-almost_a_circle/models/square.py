@@ -65,5 +65,5 @@ class Square(Rectangle):
         """
         Return a string representation
         """
-        cls = self.__class__.__name__
-        return f"[{cls}] ({self.id}) {self.x}/{self.y} - {self.size}"
+        class_name = self.__class__.__name__
+        return f"[{class_name}] ({self.id}) {self.x}/{self.y} - {self.size}"
