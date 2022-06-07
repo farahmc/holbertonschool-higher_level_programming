@@ -52,6 +52,16 @@ class Base:
                 dicts = [obj.to_dictionary() for obj in list_objs]
                 f.write(Base.to_json_string(dicts))
 
+    @staticmethod
+    def from_json_string(json_string):
+        """
+        Return a list of the JSON string representation
+        """
+        if json_string is None or len(json_string) == 0:
+            return []
+        else:
+            return json.loads(json_string)
+
     @classmethod
     def create(cls, **dictionary):
         """
@@ -66,3 +76,16 @@ class Base:
             obj = cls(1)
             obj.update(**dictionary)
             return obj
+
+    @classmethod
+    def load_from_file(cls):
+        """
+        Return a list of instances
+        """
+        filename = str(cls.__name__) + ".json"
+        try:
+            with open(filename, "r") as f:
+                objdict = Base.from_json_string(f.read())
+                return [cls.create(**dict) for dict in objdict]
+        except IOError:
+            return []
