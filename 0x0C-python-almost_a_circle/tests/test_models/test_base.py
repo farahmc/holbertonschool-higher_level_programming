@@ -70,6 +70,10 @@ class TestBase(unittest.TestCase):
         """ Tests id is give"""
         self.assertEqual(self.b_2.id, 8)
 
+    def test_id_float(self):
+        """ Test id as float """
+        self.assertEqual(1.2, Base(1.2).id)
+
     def test_too_many_args(self):
         """ Tests entering too many args to instantiate class"""
         with self.assertRaises(TypeError):
