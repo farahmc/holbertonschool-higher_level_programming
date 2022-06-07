@@ -3,6 +3,7 @@
 A class Base to be the base of other classes in this project
 """
 import json
+import csv
 
 
 class Base:
@@ -89,3 +90,51 @@ class Base:
                 return [cls.create(**dict) for dict in objdict]
         except IOError:
             return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """
+        Serialize from a Python object to CSV file
+        (Write to CSV file)
+        """
+        filename = cls.__name__ + ".csv"
+        if cls.__name__ == "Rectangle":
+            with open(filename, "w") as csv_rec:
+                fieldnames = ['id', 'width', 'height', 'x', 'y']
+                writer = csv.DictWriter(csv_rec, fieldnames=fieldnames)
+                for obj in list_objs:
+                    writer.writerow(obj.to_dictionary())
+        if cls.__name__ == "Square":
+            with open(filename, "w") as csv_sq:
+                fieldnames = ['id', 'size', 'x', 'y']
+                writer = csv.DictWriter(csv_sq, fieldnames=fieldnames)
+                for obj in list_objs:
+                    writer.writerow(obj.to_dictionary())
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """
+        Deserialize from a CSV file to Python object
+        (Read from CSV file)
+        """
+        filename = cls.__name__ + ".csv"
+        if cls.__name__ == "Rectangle":
+            try:
+                with open(filename, "r") as csv_rec:
+                    fieldnames = ['id', 'width', 'height', 'x', 'y']
+                    reader = csv.DictReader(csv_rec, fieldnames=fieldnames)
+                    reader = [dict((k, int(v)) for k, v in dic.items())
+                                 for dic in reader]
+                return [cls.create(**dic) for dic in reader]
+            except IOError:
+                return []
+        if cls.__name__ == "Square":
+            try:
+                with open(filename, "r") as csv_sq:
+                    fieldnames = ['id', 'size', 'x', 'y']
+                    reader = csv.DictReader(csv_sq, fieldnames=fieldnames)
+                    reader = [dict((k, int(v)) for k, v in dic.items())
+                                 for dic in reader]
+                return [cls.create(**dic) for dic in reader]
+            except IOError:
+                return []
