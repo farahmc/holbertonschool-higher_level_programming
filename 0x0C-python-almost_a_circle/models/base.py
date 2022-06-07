@@ -124,7 +124,7 @@ class Base:
                     fieldnames = ['id', 'width', 'height', 'x', 'y']
                     reader = csv.DictReader(csv_rec, fieldnames=fieldnames)
                     reader = [dict((k, int(v)) for k, v in dic.items())
-                                 for dic in reader]
+                              for dic in reader]
                 return [cls.create(**dic) for dic in reader]
             except IOError:
                 return []
@@ -134,7 +134,7 @@ class Base:
                     fieldnames = ['id', 'size', 'x', 'y']
                     reader = csv.DictReader(csv_sq, fieldnames=fieldnames)
                     reader = [dict((k, int(v)) for k, v in dic.items())
-                                 for dic in reader]
+                              for dic in reader]
                 return [cls.create(**dic) for dic in reader]
             except IOError:
                 return []
