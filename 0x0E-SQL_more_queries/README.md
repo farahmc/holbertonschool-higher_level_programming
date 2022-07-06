@@ -57,5 +57,19 @@ Write a script that uses the `hbtn_0d_tvshows` database to lists all genres of t
 ### 15. Only Comedy
 Write a script that lists all Comedy shows in the database `hbtn_0d_tvshows`.
 
-16. List shows and genres
+### 16. List shows and genres
 Write a script that lists all shows, and all genres linked to that show, from the database `hbtn_0d_tvshows`.
+
+## Advanced Tasks
+
+### 17. Not my genre
+Write a script that uses the `hbtn_0d_tvshows` database to list all genres not linked to the show `Dexter`
+
+### 18. No Comedy tonight!
+Write a script that lists all shows without the genre `Comedy`
+
+### 19. Rotten tomatoes
+Write a script that lists all shows from `hbtn_0d_tvshows_rate` by their rating
+
+### 20. Best genre
+Write a script that lists all genres in the database `hbtn_0d_tvshows_rate` by their rating
