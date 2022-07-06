@@ -3,5 +3,7 @@
 SELECT cities.id, cities.name, states.name
        FROM cities
        JOIN states
+-- these are the columns which match
        ON cities.state_id = states.id
+-- order by cities.id in ascending order
        ORDER BY cities.id;
