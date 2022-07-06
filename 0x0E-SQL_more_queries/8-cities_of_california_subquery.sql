@@ -3,4 +3,5 @@
 SELECT id, name
        FROM cities
        WHERE state_id = 1
+-- order by id, in ascending order
        ORDER BY id;
