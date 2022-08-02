@@ -1,4 +1,4 @@
-# README for 0x00 Python - Hello, World
+# 0x00 Python - Hello, World
 
 ## Task 0. Run Python file
 Write a Shell script that runs a Python script. The Python file name will be
@@ -46,6 +46,8 @@ Write a Python script that prints “The Zen of Python”, by TimPeters,
 
 ## Task 10. Linked list cycle
 Write a function in C that checks if a singly linked list has a cycle in it.
+
+## Advanced Tasks
 
 ## Task 11. Hello, write
 Write a Python script that prints exactly `and that piece of art is useful -
