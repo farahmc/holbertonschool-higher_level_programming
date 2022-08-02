@@ -60,6 +60,8 @@ five print `Buzz`.
 - Each element should be followed by a space
 - You are not allowed to import any module
 
+## Advanced Tasks
+
 ### 13. Insert in sorted linked list
 Write a function in C that inserts a number into a sorted singly linked list.
 
