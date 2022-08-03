@@ -9,6 +9,7 @@
   - You must use the module `MySQLdb` (`import MySQLdb`)
 - Tasks 7-13:
   - You must use the module `SQLAlchemy`
+- You are not allowed to use `execute` with `SQLalchemy`
 
 ### 0. Get all states
 Write a script that lists all states from the database `hbtn_0e_0_usa`:
