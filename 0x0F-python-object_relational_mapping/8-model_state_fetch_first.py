@@ -21,3 +21,4 @@ if __name__ == "__main__":
         print("Nothing")
     else:
         print(f"{city.id}: {city.name}")
+    session.close()
