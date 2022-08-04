@@ -110,7 +110,7 @@ Write a script that deletes all `State` objects with a name containing the lette
 
 ### 14. Cities in state
 Write a Python file similar to `model_state.py` named `model_city.py` that contains the class definition of a `City`.
-- C`ity` class:
+- `City` class:
   - inherits from `Base` (imported from `model_state`)
   - links to the MySQL table `cities`
   - class attribute `id` that represents a column of an auto-generated, unique integer, can’t be null and is a primary key
