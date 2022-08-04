@@ -19,3 +19,4 @@ if __name__ == "__main__":
     state = session.query(State)
     for city in state:
         print(f"{city.id}: {city.name}")
+    session.close()
