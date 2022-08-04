@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-"""Start link class to table in database
-"""
+""" script that lists all State objects that contain the letter a from the
+ database hbtn_0e_6_usa """
 
 
 import sys

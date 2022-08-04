@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""Start link class to table in database
-"""
+""" script that prints the first State object from database hbtn_0e_6_usa """
 
 
 import sys
