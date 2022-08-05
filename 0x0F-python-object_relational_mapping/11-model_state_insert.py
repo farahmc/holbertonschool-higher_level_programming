@@ -16,7 +16,7 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    state6 = State(id=6, name="Louisiana")
+    state6 = State(name="Louisiana")
     session.add(state6)
     session.commit()
     print(f"{state6.id}")
