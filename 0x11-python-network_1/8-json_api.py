@@ -10,10 +10,11 @@ if len(sys.argv) > 1:
 else:
     data = {'q': ""}
   
-r = post('http://0.0.0.0:5000/search_user', data)
+response = post('http://0.0.0.0:5000/search_user', data)
+j_response = r.json()
 try:
-    if len(r.json().keys()) > 0:
-        print("[{}] {}".format(r.json('id'), r.json('name')))
+    if len(j_response.keys()) > 0:
+        print("[{}] {}".format(j_response['id'], j_response['name']))
     else:
         print("No result")
 except:
