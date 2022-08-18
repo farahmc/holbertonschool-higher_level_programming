@@ -8,4 +8,4 @@ from sys import argv
 
 data = {'email': argv[2]}
 r = post(argv[1], data)
-print(r)
+print(r.text)
