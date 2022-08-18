@@ -5,10 +5,16 @@ from requests import post
 from sys import argv
 
 
-if len(sys.argv) > 1 and type(sys.argv[2]) is str:
+if len(sys.argv) > 1:
     data = {'q': argv[2]}
-    r = post('http://0.0.0.0:5000/search_user', data)
-    print("[{}] {}".format(r.json('id'), r.json('name')))
 else:
     data = {'q': ""}
-    print("No result")
+  
+r = post('http://0.0.0.0:5000/search_user', data)
+try:
+    if len(r.json().keys()) > 0:
+        print("[{}] {}".format(r.json('id'), r.json('name')))
+    else:
+        print("No result")
+except:
+    print("Not a valid JSON")
