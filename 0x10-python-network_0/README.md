@@ -27,3 +27,18 @@ Write a Bash script that takes in a URL as an argument, sends a `GET` request to
 Write a Bash script that takes in a URL, sends a `POST` request to the passed URL, and displays the body of the response
 - A variable `email` must be sent with the value `test@gmail.com`
 - A variable `subject` must be sent with the value `I will always be here for PLD`
+
+## Advanced Tasks
+
+### 6. Only status code
+Write a Bash script that sends a request to a URL passed as an argument, and displays only the status code of the response.
+- You are not allowed to use any pipe, redirection, etc.
+- You are not allowed to use `;` and `&&`
+
+### 7. cURL a JSON file
+Write a Bash script that sends a JSON `POST` request to a URL passed as the first argument, and displays the body of the response.
+- Your script must send a `POST` request with the contents of a file, passed with the filename as the second argument of the script, in the body of the request
+
+### 8. Catch me if you can!
+Write a Bash script that makes a request to `0.0.0.0:5000/catch_me` that causes the server to respond with a message containing `You got me!`, in the body of the response.
+- You are not allow to use `echo`, `cat`, etc. to display the final result
