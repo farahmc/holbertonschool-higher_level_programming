@@ -12,7 +12,7 @@ if __name__ == "__main__":
         data = {'q': ""}
   
     response = post('http://0.0.0.0:5000/search_user', data)
-    j_response = r.json()
+    j_response = response.json()
     try:
         if len(j_response.keys()) > 0:
             print("[{}] {}".format(j_response['id'], j_response['name']))
