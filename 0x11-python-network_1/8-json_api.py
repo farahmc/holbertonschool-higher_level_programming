@@ -6,7 +6,7 @@ from sys import argv
 
 
 if len(sys.argv) > 1:
-    data = {'q': argv[2]}
+    data = {'q': argv[1]}
 else:
     data = {'q': ""}
   
