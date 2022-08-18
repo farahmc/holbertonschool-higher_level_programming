@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """ script that fetches URL using package requests"""
 from requests import get
-from sys import argb
+from sys import argv
 from urllib.error import HTTPError
 
 
