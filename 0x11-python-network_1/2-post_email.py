@@ -8,8 +8,8 @@ from urllib.request import urlopen, Request
 
 
 if __name__ == "__main__":
-    url = 'http://0.0.0.0:5000/post_email'
-    values = {'email': 'me@gmail.com'}
+    url = sys.argv[1]
+    values = {'email': sys.argv[2]}
     url_data = urlencode(values)
     data = url_data.encode('utf-8')
     req = Request(url, data)
