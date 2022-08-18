@@ -12,7 +12,6 @@ if __name__ == "__main__":
     values = {'email': sys.argv[2]}
     url_data = urlencode(values)
     data = url_data.encode('utf-8')
-    req = Request(url, data)
 
-    with urlopen(req) as response:
+    with urlopen(Request(url, data)) as response:
         print(response.read().decode('utf-8'))
