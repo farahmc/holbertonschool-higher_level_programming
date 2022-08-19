@@ -5,9 +5,10 @@ from requests import get
 from sys import argv
 
 if __name__ == "__main__":
-    url = "https://api.github.com/repos/"+argv[1]+"/"+argv[2]+"/commits"
+    url = "https://api.github.com/repos/"+argv[2]+"/"+argv[1]+"/commits"
     r = get(url)
     json_r = r.json()
+    print(type(json_r))
     for data in json_r[:10]:
         print("{}: {}".format(data['sha'],
                               data['commit']['author']['name']))
