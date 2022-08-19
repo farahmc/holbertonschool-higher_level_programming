@@ -5,6 +5,6 @@
 from requests import get
 from sys import argv
 
-
-r = get(argv[1])
-print(r.headers['X-Request-Id'])
+if __name__ == "__main__":
+    r = get(argv[1])
+    print(r.headers['X-Request-Id'])
