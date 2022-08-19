@@ -12,11 +12,11 @@ if __name__ == "__main__":
         data = {'q': ""}
 
     response = post('http://0.0.0.0:5000/search_user', data)
-    j_response = response.json()
     try:
+        j_response = response.json()
         if len(j_response.keys()) > 0:
             print("[{}] {}".format(j_response['id'], j_response['name']))
         else:
             print("No result")
-    except ValueError:
+    except:
         print("Not a valid JSON")
