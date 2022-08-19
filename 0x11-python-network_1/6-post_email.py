@@ -6,6 +6,7 @@ from requests import post
 from sys import argv
 
 
-data = {'email': argv[2]}
-r = post(argv[1], data)
-print(r.text)
+if __name__ == "__main__":
+    data = {'email': argv[2]}
+    r = post(argv[1], data)
+    print(r.text)
