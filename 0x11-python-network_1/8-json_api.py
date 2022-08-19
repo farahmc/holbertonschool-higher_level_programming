@@ -10,7 +10,7 @@ if __name__ == "__main__":
         data = {'q': argv[1]}
     else:
         data = {'q': ""}
-  
+
     response = post('http://0.0.0.0:5000/search_user', data)
     j_response = response.json()
     try:
