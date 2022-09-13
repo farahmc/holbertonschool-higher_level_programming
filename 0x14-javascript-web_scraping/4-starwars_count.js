@@ -10,7 +10,7 @@ axios
   .then(res => {
     const dict = res.data.results;
     for (const movies of dict) {
-      for (const character in movies.characters) {
+      for (const character of movies.characters) {
         if (character.includes(wedge)) {
           count++;
         }
